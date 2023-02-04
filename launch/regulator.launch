@@ -1,0 +1,38 @@
+<launch> 
+  <include file="$(find mav_regulator)/launch/px4.launch"/>
+  <node name="mav_regulator_node" pkg="mav_regulator" type="mav_regulator_node" output="screen">
+    <param name="mav/gravity"             value="9.8055"/>
+    <param name="mav/T_max"               value="25.0"/>
+    <param name="mav/T_min"               value="3.0"/>
+    <param name="mav/w_xy_max"            value="1.0"/>
+    <param name="mav/w_z_max"             value="1.0"/>
+
+    <param name="mpc/q_px"                value="100.0"/>
+    <param name="mpc/q_py"                value="100.0"/>
+    <param name="mpc/q_pz"                value="100.0"/>
+
+    <param name="mpc/q_qw"                value="50.0"/>
+    <param name="mpc/q_qx"                value="50.0"/>
+    <param name="mpc/q_qy"                value="50.0"/>
+    <param name="mpc/q_qz"                value="50.0"/>
+
+    <param name="mpc/q_vx"                value="10.0"/>
+    <param name="mpc/q_vy"                value="10.0"/>
+    <param name="mpc/q_vz"                value="10.0"/>
+
+    <param name="mpc/q_th"                value="1.0"/>
+    <param name="mpc/q_wx"                value="5.0"/>
+    <param name="mpc/q_wy"                value="5.0"/>
+    <param name="mpc/q_wz"                value="5.0"/>
+
+    <param name="mpc/dt"                  value="0.05"/>
+
+    <param name="mpc/use_low_pass"        value="false"/>
+    <param name="mpc/ff_pp"               value="10.0"/>
+    <param name="mpc/ff_vv"               value="10.0"/>
+    <param name="mpc/ff_aa"               value="10.0"/>
+    <param name="mpc/ff_jj"               value="10.0"/>
+    <param name="mpc/ff_yy"               value="10.0"/>
+    <param name="mpc/ff_ww"               value="10.0"/>
+  </node>
+</launch>

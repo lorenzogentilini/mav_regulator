@@ -1,0 +1,29 @@
+<launch>   
+  <node name="mav_regulator_node" pkg="mav_regulator" type="regulator_flightmare_node" output="screen">
+    <param name="mav/gravity"             value="9.8055"/>
+    <param name="mav/T_max"               value="13.0"/>
+    <param name="mav/T_min"               value="5.0"/>
+    <param name="mav/w_xy_max"            value="1.0"/>
+    <param name="mav/w_z_max"             value="1.0"/>
+
+    <param name="mpc/q_px"                value="100.0"/>
+    <param name="mpc/q_py"                value="100.0"/>
+    <param name="mpc/q_pz"                value="100.0"/>
+
+    <param name="mpc/q_qw"                value="50.0"/>
+    <param name="mpc/q_qx"                value="50.0"/>
+    <param name="mpc/q_qy"                value="50.0"/>
+    <param name="mpc/q_qz"                value="50.0"/>
+
+    <param name="mpc/q_vx"                value="20.0"/>
+    <param name="mpc/q_vy"                value="20.0"/>
+    <param name="mpc/q_vz"                value="20.0"/>
+
+    <param name="mpc/q_th"                value="10.0"/>
+    <param name="mpc/q_wx"                value="30.0"/>
+    <param name="mpc/q_wy"                value="30.0"/>
+    <param name="mpc/q_wz"                value="30.0"/>
+    
+    <param name="mpc/dt"                  value="0.05"/>
+  </node>
+</launch>
